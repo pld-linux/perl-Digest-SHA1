@@ -36,7 +36,7 @@ mensagens NIST SHA-1 em programas Perl.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
 
