@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Digest
 %define		pnam	SHA1
@@ -39,7 +43,8 @@ mensagens NIST SHA-1 em programas Perl.
 	INSTALLDIRS=vendor
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
-%{__make} test
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
