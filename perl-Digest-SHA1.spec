@@ -5,8 +5,8 @@ Summary:	Perl Digest::SHA1 module
 Summary(pl):	Modu³ Perla Digest::SHA1
 Summary(pt_BR):	Módulo Digest::SHA1
 Name:		perl-Digest-SHA1
-Version:	2.01
-Release:	4
+Version:	2.02
+Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
