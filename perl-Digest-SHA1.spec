@@ -5,12 +5,12 @@ Summary:	Perl Digest::SHA1 module
 Summary(pl):	Modu³ Perla Digest::SHA1
 Summary(pt_BR):	Módulo Digest::SHA1
 Name:		perl-Digest-SHA1
-Version:	2.04
+Version:	2.05
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	dad6c68f8b9667d8caea1c5aeaa8530a
+# Source0-md5:	a31a9a8c1d3e72f9a0115b409678f062
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -39,6 +39,7 @@ mensagens NIST SHA-1 em programas Perl.
 	INSTALLDIRS=vendor
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
+%{__make} test
 
 %install
 rm -rf $RPM_BUILD_ROOT
