@@ -5,13 +5,13 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Digest
 %define		pnam	SHA1
-Summary:	Perl Digest::SHA1 module - interface to the SHA-1 algorithm
-Summary(pl):	Modu³ Perla Digest::SHA1 - interfejs do algorytmu SHA-1
-Summary(pt_BR):	Módulo Digest::SHA1
+Summary:	Digest::SHA1 - interface to the SHA-1 algorithm
+Summary(pl):	Digest::SHA1 - interfejs do algorytmu SHA-1
 Name:		perl-Digest-SHA1
 Version:	2.10
 Release:	1
-License:	distributable
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	4497a499b7c28ddd540a8caab412c6d7
@@ -21,13 +21,13 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The Digest::SHA1 module allows you to use the NIST SHA-1 message
-digest algorithm from within Perl programs. The algorithm takes as
+The Digest::SHA1 Perl module allows you to use the NIST SHA-1 message
+digest algorithm from within Perl programs.  The algorithm takes as
 input a message of arbitrary length and produces as output a 160-bit
 "fingerprint" or "message digest" of the input.
 
 %description -l pl
-Modu³ Digest::SHA1 pozwala u¿ywaæ algorytmu skrótu NIST SHA-1 z
+Modu³ Perla  Digest::SHA1 pozwala u¿ywaæ algorytmu skrótu NIST SHA-1 z
 programów w Perlu. Algorytm pobiera z wej¶cia wiadomo¶æ dowolnej
 d³ugo¶ci, a na wyj¶ciu produkuje 160-bitowy "odcisk palca" lub "skrót
 wiadomo¶ci" z wej¶cia.
