@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Digest
-%define	pnam	SHA1
+%define		pdir	Digest
+%define		pnam	SHA1
 Summary:	Digest::SHA1 - interface to the SHA-1 algorithm
 Summary(pl):	Digest::SHA1 - interfejs do algorytmu SHA-1
 Name:		perl-Digest-SHA1
