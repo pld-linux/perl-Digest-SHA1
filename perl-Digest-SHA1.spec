@@ -5,17 +5,18 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Digest
 %define		pnam	SHA1
-Summary:	Perl Digest::SHA1 module
-Summary(pl):	Modu³ Perla Digest::SHA1
+Summary:	Perl Digest::SHA1 module - interface to the SHA-1 algorithm
+Summary(pl):	Modu³ Perla Digest::SHA1 - interfejs do algorytmu SHA-1
 Summary(pt_BR):	Módulo Digest::SHA1
 Name:		perl-Digest-SHA1
 Version:	2.07
-Release:	1
+Release:	2
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	dc6f30d34f9c972dcc0a767386e4b6fe
-BuildRequires:	perl-devel >= 5.6.1
+Patch0:		%{name}-reset.patch
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,6 +38,7 @@ mensagens NIST SHA-1 em programas Perl.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
