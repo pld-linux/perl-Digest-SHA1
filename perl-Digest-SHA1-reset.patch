@@ -1,0 +1,10 @@
+--- Digest-SHA1-2.07/SHA1.pm.orig	2003-12-05 14:17:59.000000000 +0100
++++ Digest-SHA1-2.07/SHA1.pm	2004-01-26 21:46:15.255419080 +0100
+@@ -19,6 +19,7 @@
+ if ($@) {
+     my $err = $@;
+     *add_bits = sub { die $err };
++    *reset = \&new;
+ }
+ 
+ Digest::SHA1->bootstrap($VERSION);
