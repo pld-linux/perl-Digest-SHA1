@@ -4,7 +4,7 @@ Summary(pl):	Modu³ Perla Digest-SHA1
 Name:		perl-Digest-SHA1
 Version:	2.00
 Release:	1
-License:	Distributable
+License:	distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
