@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Digest
 %define	pnam	SHA1
-%include 	/usr/lib/rpm/macros.perl
 Summary:	Perl Digest-SHA1 module
 Summary(pl):	Modu³ Perla Digest-SHA1
 Name:		perl-Digest-SHA1
 Version:	2.01
-Release:	2
-
+Release:	3
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -27,7 +26,7 @@ d³ugo¶ci, a na wyj¶ciu produkuje 160-bitowy "odcisk palca" lub "skrót
 wiadomo¶ci" z wej¶cia.
 
 %prep
-%setup -q -n Digest-SHA1-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
