@@ -1,8 +1,9 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Digest
-%define	pnam	SHA1
+%define		pdir	Digest
+%define		pnam	SHA1
 Summary:	Perl Digest-SHA1 module
 Summary(pl):	Modu³ Perla Digest-SHA1
+Summary(pt_BR):	Módulo Digest::SHA1
 Name:		perl-Digest-SHA1
 Version:	2.01
 Release:	4
@@ -25,6 +26,10 @@ programów w Perlu. Algorytm pobiera z wej¶cia wiadomo¶æ dowolnej
 d³ugo¶ci, a na wyj¶ciu produkuje 160-bitowy "odcisk palca" lub "skrót
 wiadomo¶ci" z wej¶cia.
 
+%description -l pt_BR
+Este módulos Perl permite a utilização do algoritmo de digest de
+mensagens NIST SHA-1 em programas Perl.
+
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
@@ -36,7 +41,7 @@ perl Makefile.PL
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{perl_archlib}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT 
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
