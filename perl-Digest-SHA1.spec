@@ -9,12 +9,12 @@ Summary:	Perl Digest::SHA1 module
 Summary(pl):	Modu³ Perla Digest::SHA1
 Summary(pt_BR):	Módulo Digest::SHA1
 Name:		perl-Digest-SHA1
-Version:	2.05
+Version:	2.06
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a31a9a8c1d3e72f9a0115b409678f062
+# Source0-md5:	682cbe2ca3051463f4f57e9be3827fd4
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
