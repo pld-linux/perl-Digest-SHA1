@@ -3,7 +3,7 @@ Summary:	Perl Digest-SHA1 module
 Summary(pl):	Modu³ Perla Digest-SHA1
 Name:		perl-Digest-SHA1
 Version:	2.00
-Release:	1
+Release:	2
 License:	distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -15,9 +15,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The Digest::SHA1 module allows you to use the NIST SHA-1 message
-digest algorithm from within Perl programs.  The algorithm takes as
+digest algorithm from within Perl programs. The algorithm takes as
 input a message of arbitrary length and produces as output a 160-bit
 "fingerprint" or "message digest" of the input.
+
+%description -l pl
+Modu³ Digest::SHA1 pozwala u¿ywaæ algorytmu skrótu NIST SHA-1 z
+programów w Perlu. Algorytm pobiera z wej¶cia wiadomo¶æ dowolnej
+d³ugo¶ci, a na wyj¶ciu produkuje 160-bitowy "odcisk palca" lub "skrót
+wiadomo¶ci" z wej¶cia.
 
 %prep
 %setup -q -n Digest-SHA1-%{version}
