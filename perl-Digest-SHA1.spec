@@ -5,7 +5,7 @@ Summary:	Perl Digest-SHA1 module
 Summary(pl):	Modu³ Perla Digest-SHA1
 Name:		perl-Digest-SHA1
 Version:	2.01
-Release:	3
+Release:	4
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -34,19 +34,17 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{perl_archlib}
+install -d $RPM_BUILD_ROOT%{perl_archlib}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT 
-
-gzip -9nf README Changes 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz fip180*
-%{perl_sitearch}/Digest
+%doc README Changes fip180*
+%{perl_sitearch}/Digest/*
 %dir %{perl_sitearch}/auto/Digest/*
 %{perl_sitearch}/auto/Digest/*/*.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Digest/*/*.so
