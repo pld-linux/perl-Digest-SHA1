@@ -1,27 +1,33 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Digest
 %define		pnam	SHA1
-Summary:	Perl Digest::SHA1 module
-Summary(pl):	Modu³ Perla Digest::SHA1
-Summary(pt_BR):	Módulo Digest::SHA1
+Summary:	Digest::SHA1 - interface to the SHA-1 algorithm
+Summary(pl):	Digest::SHA1 - interfejs do algorytmu SHA-1
 Name:		perl-Digest-SHA1
-Version:	2.02
-Release:	1
-License:	distributable
+Version:	2.10
+Release:	3
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 4.0.2-104
-BuildRequires:	perl >= 5.6.1
+# Source0-md5:	4497a499b7c28ddd540a8caab412c6d7
+Patch0:		%{name}-reset.patch
+BuildRequires:	perl-devel >= 1:5.6.1
+BuildRequires:	rpm-perlprov >= 4.0.2-112.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The Digest::SHA1 module allows you to use the NIST SHA-1 message
-digest algorithm from within Perl programs. The algorithm takes as
+The Digest::SHA1 Perl module allows you to use the NIST SHA-1 message
+digest algorithm from within Perl programs.  The algorithm takes as
 input a message of arbitrary length and produces as output a 160-bit
 "fingerprint" or "message digest" of the input.
 
 %description -l pl
-Modu³ Digest::SHA1 pozwala u¿ywaæ algorytmu skrótu NIST SHA-1 z
+Modu³ Perla  Digest::SHA1 pozwala u¿ywaæ algorytmu skrótu NIST SHA-1 z
 programów w Perlu. Algorytm pobiera z wej¶cia wiadomo¶æ dowolnej
 d³ugo¶ci, a na wyj¶ciu produkuje 160-bitowy "odcisk palca" lub "skrót
 wiadomo¶ci" z wej¶cia.
@@ -32,16 +38,22 @@ mensagens NIST SHA-1 em programas Perl.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 
 %build
-%{__perl} Makefile.PL
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__perl} Makefile.PL \
+	INSTALLDIRS=site
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{perl_archlib}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
