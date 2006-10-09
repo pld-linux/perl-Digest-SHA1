@@ -28,7 +28,7 @@ input a message of arbitrary length and produces as output a 160-bit
 "fingerprint" or "message digest" of the input.
 
 %description -l pl
-Modu³ Perla  Digest::SHA1 pozwala u¿ywaæ algorytmu skrótu NIST SHA-1 z
+Modu³ Perla Digest::SHA1 pozwala u¿ywaæ algorytmu skrótu NIST SHA-1 z
 programów w Perlu. Algorytm pobiera z wej¶cia wiadomo¶æ dowolnej
 d³ugo¶ci, a na wyj¶ciu produkuje 160-bitowy "odcisk palca" lub "skrót
 wiadomo¶ci" z wej¶cia.
