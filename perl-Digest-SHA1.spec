@@ -6,7 +6,7 @@
 %define		pdir	Digest
 %define		pnam	SHA1
 Summary:	Digest::SHA1 - interface to the SHA-1 algorithm
-Summary(pl):	Digest::SHA1 - interfejs do algorytmu SHA-1
+Summary(pl.UTF-8):   Digest::SHA1 - interfejs do algorytmu SHA-1
 Name:		perl-Digest-SHA1
 Version:	2.11
 Release:	0.1
@@ -27,14 +27,14 @@ digest algorithm from within Perl programs.  The algorithm takes as
 input a message of arbitrary length and produces as output a 160-bit
 "fingerprint" or "message digest" of the input.
 
-%description -l pl
-Modu≥ Perla Digest::SHA1 pozwala uøywaÊ algorytmu skrÛtu NIST SHA-1 z
-programÛw w Perlu. Algorytm pobiera z wej∂cia wiadomo∂Ê dowolnej
-d≥ugo∂ci, a na wyj∂ciu produkuje 160-bitowy "odcisk palca" lub "skrÛt
-wiadomo∂ci" z wej∂cia.
+%description -l pl.UTF-8
+Modu≈Ç Perla Digest::SHA1 pozwala u≈ºywaƒá algorytmu skr√≥tu NIST SHA-1 z
+program√≥w w Perlu. Algorytm pobiera z wej≈õcia wiadomo≈õƒá dowolnej
+d≈Çugo≈õci, a na wyj≈õciu produkuje 160-bitowy "odcisk palca" lub "skr√≥t
+wiadomo≈õci" z wej≈õcia.
 
-%description -l pt_BR
-Este mÛdulos Perl permite a utilizaÁ„o do algoritmo de digest de
+%description -l pt_BR.UTF-8
+Este m√≥dulos Perl permite a utiliza√ß√£o do algoritmo de digest de
 mensagens NIST SHA-1 em programas Perl.
 
 %prep
