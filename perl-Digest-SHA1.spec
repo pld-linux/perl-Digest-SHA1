@@ -9,7 +9,7 @@ Summary:	Digest::SHA1 - interface to the SHA-1 algorithm
 Summary(pl):	Digest::SHA1 - interfejs do algorytmu SHA-1
 Name:		perl-Digest-SHA1
 Version:	2.11
-Release:	0.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
