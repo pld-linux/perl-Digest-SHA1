@@ -8,13 +8,13 @@
 Summary:	Digest::SHA1 - interface to the SHA-1 algorithm
 Summary(pl.UTF-8):	Digest::SHA1 - interfejs do algorytmu SHA-1
 Name:		perl-Digest-SHA1
-Version:	2.11
-Release:	3
+Version:	2.12
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2449bfe21d6589c96eebf94dae24df6b
+# Source0-md5:	eeb0292868801a202bd7ead87b291374
 Patch0:		%{name}-reset.patch
 URL:		http://search.cpan.org/dist/Digest-SHA1/
 BuildRequires:	perl-devel >= 1:5.8.0
