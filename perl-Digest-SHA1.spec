@@ -13,7 +13,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Digest/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	bd22388f268434f2b24f64e28bf1aa35
 Patch0:		%{name}-reset.patch
 URL:		http://search.cpan.org/dist/Digest-SHA1/
@@ -52,7 +52,6 @@ mensagens NIST SHA-1 em programas Perl.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{perl_archlib}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -62,10 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README Changes fip180*
-%{perl_vendorarch}/Digest/*
-%dir %{perl_vendorarch}/auto/Digest/*
-%{perl_vendorarch}/auto/Digest/*/*.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/Digest/*/*.so
-
-%{_mandir}/man3/*
+%doc Changes README fip180-1.{gif,html}
+%{perl_vendorarch}/Digest/SHA1.pm
+%dir %{perl_vendorarch}/auto/Digest/SHA1
+%{perl_vendorarch}/auto/Digest/SHA1/SHA1.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Digest/SHA1/SHA1.so
+%{_mandir}/man3/Digest::SHA1.3pm*
