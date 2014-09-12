@@ -64,6 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README fip180-1.{gif,html}
 %{perl_vendorarch}/Digest/SHA1.pm
 %dir %{perl_vendorarch}/auto/Digest/SHA1
-%{perl_vendorarch}/auto/Digest/SHA1/SHA1.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Digest/SHA1/SHA1.so
 %{_mandir}/man3/Digest::SHA1.3pm*
