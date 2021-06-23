@@ -15,9 +15,10 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Digest/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	bd22388f268434f2b24f64e28bf1aa35
 Patch0:		%{name}-reset.patch
-URL:		http://search.cpan.org/dist/Digest-SHA1/
+URL:		https://metacpan.org/dist/Digest-SHA1
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
